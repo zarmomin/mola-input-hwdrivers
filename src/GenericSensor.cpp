@@ -17,7 +17,7 @@
  */
 
 #include <mola-kernel/yaml_helpers.h>
-#include <mola-sensor-hwdrivers/GenericSensor.h>
+#include <mola-input-hwdrivers/GenericSensor.h>
 #include <mrpt/core/initializer.h>
 #include <yaml-cpp/yaml.h>
 
