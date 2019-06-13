@@ -16,15 +16,15 @@
  *
  */
 
-#include <mola-kernel/yaml_helpers.h>
 #include <mola-input-hwdrivers/GenericSensor.h>
+#include <mola-kernel/yaml_helpers.h>
 #include <mrpt/core/initializer.h>
 #include <yaml-cpp/yaml.h>
 
 using namespace mola;
 using namespace mola::sensor_hwdrivers;
 
-MRPT_INITIALIZER(do_register){MOLA_REGISTER_MODULE(GenericSensor)}
+MRPT_INITIALIZER(do_register_GenericSensor){MOLA_REGISTER_MODULE(GenericSensor)}
 
 GenericSensor::GenericSensor() = default;
 
