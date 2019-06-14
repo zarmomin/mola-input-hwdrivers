@@ -17,6 +17,8 @@ project(mola-input-hwdrivers LANGUAGES CXX)
 find_package(mola-common REQUIRED)
 
 # find dependencies:
+find_mola_package(mola-kernel)
+
 find_package(mrpt-hwdrivers REQUIRED)
 
 # -----------------------
