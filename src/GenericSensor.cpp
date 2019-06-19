@@ -10,7 +10,7 @@
  * @date   Feb 15, 2019
  */
 
-/** \defgroup mola_sensor_hwdrivers_grp mola_sensor_hwdrivers_grp.
+/** \defgroup mola_input_hwdrivers_grp mola_input_hwdrivers_grp.
  * RawDataSource from any sensor supported by mrpt-hwdrivers
  *
  *
@@ -22,9 +22,13 @@
 #include <yaml-cpp/yaml.h>
 
 using namespace mola;
-using namespace mola::sensor_hwdrivers;
 
-MRPT_INITIALIZER(do_register_GenericSensor){MOLA_REGISTER_MODULE(GenericSensor)}
+IMPLEMENTS_MRPT_OBJECT_NS_PREFIX(GenericSensor, RawDataSourceBase, mola);
+
+MRPT_INITIALIZER(do_register_GenericSensor)
+{
+    MOLA_REGISTER_MODULE(GenericSensor);
+}
 
 GenericSensor::GenericSensor() = default;
 

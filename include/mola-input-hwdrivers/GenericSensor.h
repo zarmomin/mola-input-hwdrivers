@@ -15,13 +15,13 @@
 
 namespace mola
 {
-namespace sensor_hwdrivers
-{
 /**
  *
- * \ingroup mola_sensor_hwdrivers_grp */
+ * \ingroup mola_input_hwdrivers_grp */
 class GenericSensor : public RawDataSourceBase
 {
+    DEFINE_MRPT_OBJECT(GenericSensor)
+
    public:
     GenericSensor();
     ~GenericSensor() override = default;
@@ -33,5 +33,4 @@ class GenericSensor : public RawDataSourceBase
    private:
 };
 
-}  // namespace sensor_hwdrivers
 }  // namespace mola
