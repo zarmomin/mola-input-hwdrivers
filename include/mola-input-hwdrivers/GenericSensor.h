@@ -12,6 +12,7 @@
 #pragma once
 
 #include <mola-kernel/interfaces/RawDataSourceBase.h>
+#include <mrpt/hwdrivers/CGenericSensor.h>
 
 namespace mola
 {
@@ -31,6 +32,7 @@ class GenericSensor : public RawDataSourceBase
     void spinOnce() override;
 
    private:
+    mrpt::hwdrivers::CGenericSensor::Ptr sensor_;
 };
 
 }  // namespace mola
