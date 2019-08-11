@@ -1,8 +1,8 @@
 ================================
-Module: mola-sensor-hwdrivers
+Module: mola-input-hwdrivers
 ================================
 
-Write me!
+Connect to any live sensor supported by mrpt-hwdrivers.
 
 .. index::
    single: mola-sensor-hwdrivers
