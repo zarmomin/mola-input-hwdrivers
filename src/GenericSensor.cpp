@@ -48,7 +48,7 @@ void GenericSensor::initialize(const std::string& cfg_block)
     MRPT_LOG_DEBUG_STREAM("Initializing with these params:\n" << cfg);
 
     std::string driver;
-    yamlLoadMemberReq<std::string>(cfg, "driver", driver);
+    yamlLoadMemberReq<std::string>(cfg, "driver", &driver);
 
     sensor_ = CGenericSensor::createSensorPtr(driver);
     if (!sensor_)
