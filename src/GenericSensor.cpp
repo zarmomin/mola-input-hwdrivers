@@ -43,14 +43,12 @@ void GenericSensor::initialize(const std::string& cfg_block)
     // Mandatory parameters:
     auto c = YAML::Load(cfg_block);
 
-    ENSURE_YAML_ENTRY_EXISTS(c, "params");
+    ensureYamlEntryExists(c, "params");
     auto cfg = c["params"];
     MRPT_LOG_DEBUG_STREAM("Initializing with these params:\n" << cfg);
 
-    // YAML_LOAD_MEMBER_REQ(base_dir, std::string);
-
     std::string driver;
-    YAML_LOAD_REQ(driver, std::string);
+    yamlLoadMemberReq<std::string>(cfg, "driver", driver);
 
     sensor_ = CGenericSensor::createSensorPtr(driver);
     if (!sensor_)
